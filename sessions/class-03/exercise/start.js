@@ -22,6 +22,10 @@ export function insertItemAtIndex(arr, index, item) {
 	// 🧸 Use Array.prototype.slice to create two arrays
 	// 🧸 Use spread operator to join them with the new item
 	// 🧸 At the index.
+
+	if (index < 0 || index > arr.length) {
+		throw new Error('index should be within array length');
+	}
 }
 
 /**

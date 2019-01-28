@@ -13,11 +13,15 @@ class SomeClass {
 // 💰 Convert the above class with JavaScript's Function
 export function SomeFunction() {
 	// 🧸 See what should be the object's own property
+	this.name = 'Dragons';
 }
 
 // 🧸 Also think about methods in prototype chain.
 SomeFunction.prototype = {
 	// 🧸 See what should come from prototype
+	sayDragon() {
+		return this.name.toUpperCase();
+	}
 };
 
 // 🧸 Let's create a class State
