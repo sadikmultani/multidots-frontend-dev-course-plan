@@ -11,7 +11,7 @@
  * @returns {number} Value with "number" type, 0 if not a number.
  */
 export function safelyConvertToNumber(possiblyNum) {
-	if (possiblyNum === 'symbol') {
+	if (typeof possiblyNum === 'symbol') {
 		return 0;
 	}
 	const num = Number.parseFloat(possiblyNum);
@@ -34,7 +34,7 @@ export function safelyConvertToNumber(possiblyNum) {
  * @returns {number} Formatted currency value.
  */
 export function formatCurrency(num, decimal) {
-	return safelyConvertToNumber(num).toFixed(decimal);
+	return +safelyConvertToNumber(num).toFixed(decimal);
 }
 
 /**
@@ -95,7 +95,9 @@ export function hasValue(item) {
  * @returns {string[]} Array where firstName is in 0th position and last name is in 1st position.
  */
 export function getFirstAndLastNames(name) {
-
+	let nameValue = name.split(" ");
+	
+	return name;
 }
 
 /**
